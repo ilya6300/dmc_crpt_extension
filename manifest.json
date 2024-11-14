@@ -1,0 +1,20 @@
+{
+  "name": "DMC MARK",
+  "description": "DMC",
+  "version": "1.0",
+  "manifest_version": 3,
+  "all_frames": false,
+  "icons": {},
+  "action": {
+    "default_popup": "/html/index.html"
+  },
+  "permissions": ["activeTab", "scripting", "storage"],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [
+    {
+      "matches": ["https://water.sandbox.crptech.ru/cis/list/*"],
+      "js": ["start_content.js", "injection_info.js"]
+    }
+  ],
+  "host_permissions": ["<all_urls>"]
+}
