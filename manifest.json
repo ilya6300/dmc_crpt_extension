@@ -1,6 +1,6 @@
 {
-  "name": "DMC MARK",
-  "description": "DMC",
+  "name": "DMC crpt injection",
+  "description": "DMC injection",
   "version": "1.0",
   "manifest_version": 3,
   "all_frames": false,
@@ -13,7 +13,7 @@
   "content_scripts": [
     {
       "matches": ["https://water.sandbox.crptech.ru/cis/list/*"],
-      "js": ["start_content.js", "injection_info.js"]
+      "js": ["start_content.js"]
     }
   ],
   "host_permissions": ["<all_urls>"]
