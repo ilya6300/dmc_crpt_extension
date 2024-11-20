@@ -1,0 +1,150 @@
+:root {
+  --myOrange: rgb(240, 141, 27);
+}
+* {
+  list-style: none;
+  font-family: Montserrat;
+  box-sizing: border-box;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+}
+.body {
+  width: 350px;
+  background: rgb(52, 116, 211);
+  margin: 0;
+  padding: 10px;
+}
+.container {
+  background: #63666a;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px 15px;
+  font-family: revert-layer;
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+}
+.ex-active-container {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.ex-header {
+  display: flex;
+  align-items: flex-start;
+}
+.ex-title {
+  margin: 0;
+  font-size: 20px;
+}
+.ex-text {
+  font-size: 12px;
+  color: #ffffff8c;
+}
+.ex-logo-text {
+  font-size: 36px;
+  font-weight: 500;
+  color: rgb(52, 116, 211);
+}
+.ex-logo-line {
+  width: 100%;
+  height: 3px;
+  background: var(--myOrange);
+}
+.ex-active {
+  width: 30px;
+  height: 15px;
+  border-radius: 14px;
+  cursor: pointer;
+  border: 1px solid var(--myOrange);
+  padding: 0 2px 2px;
+  position: relative;
+}
+
+.ex-active-span-anim {
+  position: absolute;
+  display: block;
+  width: 11px;
+  height: 11px;
+  top: 10%;
+  border-radius: 50%;
+  border: 1px solid var(--myOrange);
+  animation: swift_deactivate 1s forwards ease;
+}
+
+.ex-active-a {
+  /* text-align: right; */
+  box-shadow: 0 0 3px 2px var(--myOrange);
+}
+
+.ex-active-span {
+  position: absolute;
+  display: block;
+  width: 11px;
+  height: 11px;
+  top: 10%;
+  border-radius: 50%;
+  border: 1px solid var(--myOrange);
+}
+
+.ex-active-span-a {
+  animation: swift_active 1s forwards ease;
+  background: var(--myOrange);
+  /* box-shadow: 0 0 3px 2px var(--myOrange); */
+}
+
+#exConnect {
+  padding: 5px 8px;
+  font-size: 11px;
+  border: 1px solid rgb(52, 116, 211);
+  border-radius: 5px;
+  background: rgb(52 116 211 / 23%);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+#exConnect:hover {
+  background: rgb(52, 116, 211);
+}
+#ex-active {
+  display: none;
+}
+
+@keyframes swift_active {
+  0% {
+    box-shadow: none;
+    left: 10%;
+    background: none;
+  }
+  100% {
+    background: var(--myOrange);
+    box-shadow: 0 0 3px 2px var(--myOrange);
+    left: 50%;
+  }
+}
+@keyframes swift_deactivate {
+  0% {
+    box-shadow: none;
+    left: 50%;
+    background: var(--myOrange);
+  }
+  100% {
+    background: none;
+    box-shadow: none;
+    left: 10%;
+  }
+}

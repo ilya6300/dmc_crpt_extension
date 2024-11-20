@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/hello.css" />
+    <title>DMC crpt info</title>
+  </head>
+  <body>
+    <div class="container">
+    <ul class="list_container">
+      <li class="list_title">Вы установили плагин "DMC crpt информация"</li>
+      <li class="list_text">
+        Плагин производит интеграцию с базой данных (БД) DMC Server. Позволяет
+        получать следующую информацию по кодам маркировки (КМ) не выходя из
+        личного кабинета ЧЗ – статус КМ, дату документа на эмиссию КМ, номер
+        задания, уровни агрегации (0 и 1 уровня).
+        Обратите внимание! Если вы впервые за сессию в браузере активировали плагин через переключатель (см.ниже пункт 2), то необходимо обновить страницу портала ЧЗ. Если вы перешли в другую категорию, вам так же необходимо обновить страницу. Например, вы проверяли коды в молочке и перешли на упакованную воду.
+      </li>
+      <li class="list_text">
+           Инструкция по работе: Выберите вашу категорию на портале ЧЗ. Далее во вкладке "Маркировка", выберите подвкладку "Коды маркировки". Если плагин активирован, то при наведение на строку необходимого кода маркировки, появится кнопка "Проверить код в DMC". При нажатие на кнопку, у вас отобразится информация описанная в абзаце выше
+      </li>
+      <li class="row_100">
+        <ul class="list_img">
+        <img class="img" src="/img/info.png" alt="info" />
+
+          <li>1. Плагин DMC ЦРПТ информация</li>
+          <li>2. Активация и деактивация плагина</li>
+          <li>3. Кнопка проверки связи с БД DMC</li>
+          <li>4. ip-адрес для подключения к БД</li>
+          <li>5. Порт для подключения к БД</li>
+        </ul>
+        <li>Для работы настройте ip-адрес и порт для подключения к БД и нажмите "Сохранить"</li>        
+        <li class="row_100">
+            <ul>
+                <li class="row_mrg_b_10">Укажите адрес подключения к БД</li>
+                <li><input placeholder="Пример: 127.0.0.1" class="inp_bd" type="text" id="addresBD"></li>
+            </ul>
+        </li>
+        <li class="row_100">
+            <ul>
+                <li class="row_mrg_b_10">Укажите порт подключения к БД</li>
+                <li><input placeholder="По умолчанию: 6432" class="inp_bd" type="text" id="portBD"></li>
+            </ul>
+        </li>
+      </li>
+      <li class="list_btn_container"><button id="setSettingBD">Сохранить</button><button id="checkConnect">Проверка связи</button><span id="resultCheck"></span></li>
+      <li>Разработчик ООО "МАСТ СОФТ"</li>
+    </ul>
+</div>
+<script src="/js/hello.js"></script>
+  </body>
+</html>

@@ -1,20 +1,27 @@
 {
-  "name": "DMC crpt injection",
-  "description": "DMC injection",
+  "name": "DMC crpt info",
+  "description": "Производитель ООО 'МАСТ СОФТ'. Расширение осуществляет прямую интеграцию с базой данных с DMC server. Благодаря этому, позволяет получать мгновенную информацию по коду маркировки в базе данных DMC, не покидая личного кабинета ЧЗ",
   "version": "1.0",
   "manifest_version": 3,
   "all_frames": false,
-  "icons": {},
   "action": {
-    "default_popup": "/html/index.html"
+    "default_popup": "/html/index.html",
+    "default_icon": "/icons/dmc_icon-32.png"
+  },
+  "icons": {
+    "16": "/icons/dmc_icon-16.png",
+    "32": "/icons/dmc_icon-32.png",
+    "48": "/icons/dmc_icon-48.png",
+    "128": "/icons/dmc_icon-128.png"
   },
   "permissions": ["activeTab", "scripting", "storage"],
   "background": { "service_worker": "background.js" },
   "content_scripts": [
     {
-      "matches": ["https://water.sandbox.crptech.ru/cis/list/*"],
-      "js": ["start_content.js"]
+      "matches": ["https://*.sandbox.crptech.ru/cis/list/*"],
+      "js": ["start_content.js"],
+      "run_at": "document_start"
     }
   ],
-  "host_permissions": ["<all_urls>"]
+  "host_permissions": ["https://*.sandbox.crptech.ru/cis/list/*"]
 }

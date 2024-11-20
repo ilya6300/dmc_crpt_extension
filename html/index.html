@@ -3,13 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="/style/index.css" />
     <title>DMC CRPT</title>
+    <style>
+      input:focus {
+        outline: 0;
+        outline-offset: 0;
+      }
+    </style>
   </head>
-  <body>
-    <!-- <button id="injection">Подключиться</button> -->
-    <div>Адрес БД DMC <label id="hostBD"></label></div>
-    <label>Включено<input type="checkbox" id="ex-active" /></label>
-    <script src="/js/app.js" type="module"></script>
+  <body class="body">
+    <div class="container">
+      <div class="ex-header">
+        <h1 class="ex-title">DMC ЦРПТ информация</h1>
+        <div class="ex-logo-container">
+          <div class="ex-logo-text">DMC</div>
+          <div class="ex-logo-line"></div>
+        </div>
+      </div>
+      <p class="ex-text">
+        На странице ЦРПТ с списком кодов маркировки, позволяет проверить статус
+        кода маркировки в программном обеспечение DMC.
+      </p>
+      <div class="ex-active-container">
+        Переключатель
+        <label class="ex-active"
+          ><input type="checkbox" id="ex-active" /><span
+            class="ex-active-span"
+          ></span
+        ></label>
+        <button id="exConnect">Проверка связи</button>
+      </div>
+      <script src="/js/app.js" type="module"></script>
+    </div>
   </body>
 </html>
